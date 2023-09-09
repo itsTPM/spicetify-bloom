@@ -1043,11 +1043,6 @@ button.switch {
   padding: 8px;
 }
 
-.main-trackList-indexable {
-  padding: 8px;
-  padding-bottom: 24px;
-}
-
 .main-trackList-trackList.main-trackList-indexable {
   background-color: var(--spice-card);
   border-radius: var(--border-radius-2);
@@ -3040,4 +3035,16 @@ body:has(#lyrics-fullscreen-container) > #main > .Root {
 .main-trackList-trackListRow.main-trackList-trackListRowGrid:hover {
   transform: translateX(5px);
   box-shadow: 0 2px 8px rgba(var(--spice-rgb-layer-shadow), 0.5) !important;
+}
+
+.main-trackList-indexable {
+  padding-bottom: 16px;
+}
+
+.TypeElement-balladBold-textSubdued-type {
+  margin-bottom: 8px;
+}
+
+.queue-queuePage-subHeader {
+  margin-top: 16px;
 }
