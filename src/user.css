@@ -18,7 +18,7 @@
 
 * {
   font-family: 'Segoe UI Variable Display', 'Segoe UI Variable Text', 'Segoe UI', 'Microsoft Ya Hei',
-    sans-serif !important;
+  sans-serif !important;
   /* font-family: 'Segoe UI Variable Display','Segoe UI Variable Text', 'Microsoft Ya Hei', sans-serif !important; */
   line-height: normal;
   box-shadow: none !important;
@@ -242,7 +242,7 @@ html {
 .x-categoryCard-CategoryCard,
 .main-heroCard-card {
   transition: transform 400ms var(--ms-motion-timing-decelerate),
-    box-shadow 400ms var(--ms-motion-timing-decelerate);
+  box-shadow 400ms var(--ms-motion-timing-decelerate);
 }
 
 .link-subtle {
@@ -642,14 +642,14 @@ div#context-menu > .main-userWidget-dropDownMenu::before,
 }
 
 .main-collectionLinkButton-collectionLinkButton[href='/collection/tracks']
-  .main-collectionLinkButton-icon {
+.main-collectionLinkButton-icon {
   -webkit-mask-image: url('https://nimsandu.github.io/spicetify-bloom/assets/fluentui-system-icons/ic_fluent_heart_24_filled.svg');
   background-color: white !important;
   margin-right: 0px;
 }
 
 .main-collectionLinkButton-collectionLinkButton[href='/collection/episodes']
-  .main-collectionLinkButton-icon {
+.main-collectionLinkButton-icon {
   -webkit-mask-image: url('https://nimsandu.github.io/spicetify-bloom/assets/fluentui-system-icons/ic_fluent_mic_on_24_filled.svg');
   background-color: #00da6b !important;
   margin-right: 0px;
@@ -1015,7 +1015,7 @@ button.switch {
 }
 
 .main-nowPlayingView-panelOpenDiv
-  .main-nowPlayingView-section:not(.main-nowPlayingView-lyricsGradient) {
+.main-nowPlayingView-section:not(.main-nowPlayingView-lyricsGradient) {
   background-color: var(--spice-card) !important;
 }
 
@@ -1100,11 +1100,11 @@ button.switch {
 .main-trackList-trackListRow.main-trackList-selected:focus a,
 .main-trackList-trackListRow.main-trackList-selected button:not(.main-trackList-rowHeartButton),
 .main-trackList-trackListRow.main-trackList-selected:hover
-  button:not(.main-trackList-rowHeartButton),
+button:not(.main-trackList-rowHeartButton),
 .main-trackList-trackListRow.main-trackList-selected:active
-  button:not(.main-trackList-rowHeartButton),
+button:not(.main-trackList-rowHeartButton),
 .main-trackList-trackListRow.main-trackList-selected:focus
-  button:not(.main-trackList-rowHeartButton),
+button:not(.main-trackList-rowHeartButton),
 .main-trackList-trackListRow.main-trackList-selected div,
 .main-trackList-trackListRow.main-trackList-selected:hover div,
 .main-trackList-trackListRow.main-trackList-selected:active div,
@@ -1579,8 +1579,8 @@ path[d='M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
 /* friend activity */
 
 .spotify__container--is-desktop.spotify__os--is-windows
-  .Root__top-container--right-sidebar-visible
-  .main-topBar-container {
+.Root__top-container--right-sidebar-visible
+.main-topBar-container {
   padding-inline-end: 167px;
 }
 
@@ -2034,9 +2034,9 @@ input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
 
 .main-coverSlotCollapsed-container[aria-hidden='true'] .cover-art .cover-art-image,
 .main-nowPlayingWidget-coverExpanded
-  .main-coverSlotCollapsed-container
-  .cover-art
-  .cover-art-image {
+.main-coverSlotCollapsed-container
+.cover-art
+.cover-art-image {
   width: 200px;
   height: 200px;
   border-radius: var(--border-radius-1) !important;
@@ -2323,11 +2323,6 @@ input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
   background-color: transparent;
 }
 
-.main-playButton-PlayButton > button {
-  width: 40px;
-  height: 40px;
-}
-
 .main-playButton-PlayButton > button > span {
   display: none;
 }
@@ -2354,7 +2349,7 @@ input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
 }
 
 .toggle-module__toggle-input___ceLM4_marketplace:checked
-  ~ .toggle-module__toggle-indicator-wrapper___6Lcp0_marketplace {
+~ .toggle-module__toggle-indicator-wrapper___6Lcp0_marketplace {
   background-color: var(--spice-accent);
 }
 
@@ -2550,8 +2545,8 @@ button.arrow-btn {
 }
 
 #lyrics-fullscreen-container
-  > .lyrics-lyricsContainer-LyricsContainer:has(.lyrics-lyricsContainer-UnsyncedLyricsPage)
-  .lyrics-lyricsContainer-Provider {
+> .lyrics-lyricsContainer-LyricsContainer:has(.lyrics-lyricsContainer-UnsyncedLyricsPage)
+.lyrics-lyricsContainer-Provider {
   padding-bottom: 35px;
 }
 
@@ -2572,28 +2567,28 @@ button.arrow-btn {
 }
 
 body:has(#lyrics-fullscreen-container)
-  > #main
-  > .Root
-  > .Root__top-container
-  > *:not(.Root__main-view),
+> #main
+> .Root
+> .Root__top-container
+> *:not(.Root__main-view),
 body:has(#lyrics-fullscreen-container)
-  > #main
-  > .Root
-  > .Root__top-container
-  > .Root__main-view
-  > *:not(.main-view-container),
+> #main
+> .Root
+> .Root__top-container
+> .Root__main-view
+> *:not(.main-view-container),
 body:has(#lyrics-fullscreen-container)
-  > #main
-  > .Root
-  > .Root__top-container
-  > .Root__main-view
-  > .main-view-container
-  > *:not(.under-main-view),
+> #main
+> .Root
+> .Root__top-container
+> .Root__main-view
+> .main-view-container
+> *:not(.under-main-view),
 body:has(#lyrics-fullscreen-container)
-  > #main
-  > .Root
-  > .Root__top-container
-  > .Root__main-view::before {
+> #main
+> .Root
+> .Root__top-container
+> .Root__main-view::before {
   display: none !important;
 }
 
@@ -2881,7 +2876,7 @@ body:has(#lyrics-fullscreen-container) > #main > .Root {
 }
 
 .main-yourLibraryX-collapseButton.main-yourLibraryX-collapseButtonIsCollapsed
-  > .main-yourLibraryX-button {
+> .main-yourLibraryX-button {
   color: var(--spice-subtext);
 }
 
@@ -3014,4 +3009,35 @@ body:has(#lyrics-fullscreen-container) > #main > .Root {
 
 .main-notificationBubbleContainer-NotificationBubbleContainer {
   margin-bottom: 95px;
+}
+
+/* https://github.com/itsTPM/spicetify-bloom */
+
+.view-homeShortcutsGrid-shortcut {
+  transition: transform 400ms var(--ms-motion-timing-decelerate),
+  box-shadow 400ms var(--ms-motion-timing-decelerate);
+}
+
+.view-homeShortcutsGrid-shortcut:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 4px 16px rgba(var(--spice-rgb-layer-shadow), 0.5) !important;
+}
+
+.view-homeShortcutsGrid-shortcut::after {
+  transform: translateY(0px);
+}
+
+.main-playButton-PlayButton > button {
+  width: 28px;
+  height: 28px;
+}
+
+.main-trackList-trackListRow.main-trackList-trackListRowGrid {
+  transition: transform 400ms var(--ms-motion-timing-decelerate),
+  box-shadow 400ms var(--ms-motion-timing-decelerate);
+}
+
+.main-trackList-trackListRow.main-trackList-trackListRowGrid:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(var(--spice-rgb-layer-shadow), 0.5) !important;
 }

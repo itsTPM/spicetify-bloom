@@ -50,8 +50,8 @@
                   const image = playlist ? playlist.images[0] || {} : {};
                   icon = {
                     src:
-                      image.url ||
-                      'https://nimsandu.github.io/spicetify-bloom/assets/fluentui-system-icons/ic_fluent_music_note_2_24_filled.svg',
+                        image.url ||
+                        'https://nimsandu.github.io/spicetify-bloom/assets/fluentui-system-icons/ic_fluent_music_note_2_24_filled.svg',
                     size: 'cover',
                   };
                   if (!image.url) {
@@ -65,8 +65,8 @@
                   base64 = localStorage.getItem(`bloom:folder-image:${id}`);
                   icon = {
                     src:
-                      base64 ||
-                      'https://nimsandu.github.io/spicetify-bloom/assets/fluentui-system-icons/ic_fluent_folder_24_filled.svg',
+                        base64 ||
+                        'https://nimsandu.github.io/spicetify-bloom/assets/fluentui-system-icons/ic_fluent_folder_24_filled.svg',
                     size: 'cover',
                   };
                   if (!base64) {
@@ -100,7 +100,7 @@
         });
 
         const playlistData = await fetchPlaylistData(
-          'https://api.spotify.com/v1/me/playlists?limit=50'
+            'https://api.spotify.com/v1/me/playlists?limit=50'
         );
         const observer = new MutationObserver(async () => {
           observer.disconnect();
@@ -141,9 +141,9 @@
 
   const interval = setInterval(() => {
     if (
-      typeof Spicetify.Platform === 'undefined' ||
-      (typeof Spicetify.Platform.Translations.play === 'undefined' &&
-        typeof Spicetify.Platform.Translations.pause === 'undefined')
+        typeof Spicetify.Platform === 'undefined' ||
+        (typeof Spicetify.Platform.Translations.play === 'undefined' &&
+            typeof Spicetify.Platform.Translations.pause === 'undefined')
     )
       return;
     clearInterval(interval);
@@ -262,13 +262,13 @@
 
       if (textDirection === 'rtl') {
         offset =
-          lyricsWrapper.offsetRight +
-          parseInt(window.getComputedStyle(lyricsWrapper).marginRight, 10);
+            lyricsWrapper.offsetRight +
+            parseInt(window.getComputedStyle(lyricsWrapper).marginRight, 10);
         maxWidth = Math.round(0.95 * (lyricsContainer.clientWidth - offset));
       } else {
         offset =
-          lyricsWrapper.offsetLeft +
-          parseInt(window.getComputedStyle(lyricsWrapper).marginLeft, 10);
+            lyricsWrapper.offsetLeft +
+            parseInt(window.getComputedStyle(lyricsWrapper).marginLeft, 10);
         maxWidth = Math.round(0.95 * (lyricsContainer.clientWidth - offset));
       }
 
@@ -310,10 +310,10 @@
 
     function setLyricsPageProperties() {
       const lyricsContentWrapper = document.getElementsByClassName(
-        'lyrics-lyrics-contentWrapper'
+          'lyrics-lyrics-contentWrapper'
       )[0];
       const lyricsContentContainer = document.getElementsByClassName(
-        'lyrics-lyrics-contentContainer'
+          'lyrics-lyrics-contentContainer'
       )[0];
 
       lyricsContentWrapper.style.maxWidth = '';
@@ -322,9 +322,9 @@
       const lyricsTextDirection = detectTextDirection();
       setLyricsTransformOrigin(lyricsTextDirection);
       const lyricsMaxWidth = calculateLyricsMaxWidth(
-        lyricsTextDirection,
-        lyricsContentWrapper,
-        lyricsContentContainer
+          lyricsTextDirection,
+          lyricsContentWrapper,
+          lyricsContentContainer
       );
       lyricsContentWrapper.style.setProperty('--lyrics-active-max-width', `${lyricsMaxWidth}px`);
       lockLyricsWrapperWidth(lyricsContentWrapper);
@@ -350,7 +350,7 @@
     if (typeof lyricsObserver === 'undefined' || lyricsObserver == null) {
       waitForElement(['.lyrics-lyrics-contentWrapper'], () => {
         const lyricsContentWrapper = document.getElementsByClassName(
-          'lyrics-lyrics-contentWrapper'
+            'lyrics-lyrics-contentWrapper'
         )[0];
         const lyricsObserver = new MutationObserver(lyricsCallback);
         const lyricsObserverConfig = { childList: true };
@@ -498,13 +498,13 @@
 
       lyricsBackdropImage.onload = async () => {
         const [drawWidth, drawHeight, drawX, drawY] = await calculateContextDrawValues(
-          lyricsBackdrop
+            lyricsBackdrop
         );
         context.drawImage(lyricsBackdropImage, drawX, drawY, drawWidth, drawHeight);
         updateFilters(lyricsBackdrop, lyricsBackdropImage);
 
         const maxRadius = Math.ceil(
-          Math.sqrt(lyricsBackdropPrevious.width ** 2 + lyricsBackdropPrevious.height ** 2) / 2
+            Math.sqrt(lyricsBackdropPrevious.width ** 2 + lyricsBackdropPrevious.height ** 2) / 2
         );
         const centerX = lyricsBackdropPrevious.width / 2;
         const centerY = lyricsBackdropPrevious.height / 2;
@@ -596,8 +596,8 @@
         updateLyricsPageProperties();
       }
     } else if (
-      lyricsBackdropContainer != null &&
-      !Spicetify.Platform.History.location.pathname.includes('lyrics')
+        lyricsBackdropContainer != null &&
+        !Spicetify.Platform.History.location.pathname.includes('lyrics')
     ) {
       lyricsBackdropContainer.style.display = 'none';
     }
@@ -629,7 +629,7 @@
   function centerTopbar() {
     waitForElement(['.main-topBar-topbarContentWrapper'], () => {
       const topBarContentWrapper = document.getElementsByClassName(
-        'main-topBar-topbarContentWrapper'
+          'main-topBar-topbarContentWrapper'
       )[0];
 
       const left = topBarContentWrapper.offsetLeft;
@@ -660,8 +660,8 @@
     const oldPanelWidth = match[1];
     setTimeout(() => {
       const newPanelWidth = parseInt(
-        mutationsList[0].target.style.getPropertyValue('--panel-width'),
-        10
+          mutationsList[0].target.style.getPropertyValue('--panel-width'),
+          10
       );
       if (newPanelWidth > oldPanelWidth) {
         const buddyFeedContainer = document.getElementsByClassName('main-buddyFeed-container')[0];
@@ -726,24 +726,24 @@
 
   // context menu items for custom folder images
   new Spicetify.ContextMenu.Item(
-    'Remove folder image',
-    ([uri]) => {
-      const { id } = Spicetify.URI.from(uri);
-      localStorage.removeItem(`bloom:folder-image:${id}`);
-      updatePlaylistsImages();
-    },
-    ([uri]) => Spicetify.URI.isFolder(uri),
-    'x'
+      'Remove folder image',
+      ([uri]) => {
+        const { id } = Spicetify.URI.from(uri);
+        localStorage.removeItem(`bloom:folder-image:${id}`);
+        updatePlaylistsImages();
+      },
+      ([uri]) => Spicetify.URI.isFolder(uri),
+      'x'
   ).register();
   new Spicetify.ContextMenu.Item(
-    'Choose folder image',
-    ([uri]) => {
-      filePickerInput.uri = uri;
-      filePickerForm.reset();
-      filePickerInput.click();
-    },
-    ([uri]) => Spicetify.URI.isFolder(uri),
-    'edit'
+      'Choose folder image',
+      ([uri]) => {
+        filePickerInput.uri = uri;
+        filePickerForm.reset();
+        filePickerInput.click();
+      },
+      ([uri]) => Spicetify.URI.isFolder(uri),
+      'edit'
   ).register();
 
   // fix backdrop-filter for some flyouts and menus
@@ -755,9 +755,9 @@
         const { body } = document;
         const { parentNode } = tippy;
         if (
-          parentNode !== body &&
-          !parentNode.classList?.contains('lyrics-tooltip-wrapper') &&
-          !parentNode.classList?.contains('main-contextMenu-menuItem')
+            parentNode !== body &&
+            !parentNode.classList?.contains('lyrics-tooltip-wrapper') &&
+            !parentNode.classList?.contains('main-contextMenu-menuItem')
         ) {
           // inherit colors
           tippy.classList.add('encore-dark-theme');
